@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cardo&family=Pacifico&display=swap');
+
+body{
+padding:0;
+margin:0;
+
+}
+
+
+.footer{
+	background: rgba(0,0,0,0.8) !important;
+	}
+	.up-area{
+		padding: 50px 30px;
+		color: #F0F8FF;
+		font-family: cardo;
+		}
+		.menu .nav-link, .contact .nav-link{
+			padding-left:0;
+			}
+	.divider{
+		padding:0.5px;
+		background: RGBA(224, 223, 220,0.8);
+		}
+		
+	.up-area h3{
+    font-size: 20px;  
+    font-family: Georgia, serif;
+    font-weight: 600;
+		}
+	.down-area{
+		 color:white;
+		padding:30px 0;
+		text-align:center;
+		}
+
+     .down-area a{
+  	text-decoration:none;
+      font-family: 'Pacifico', cursive;
+      color: #f0f8ff;
+      
+		}
+		
+	.up-area h3::after{
+		
+	content: "";
+    display: block;
+    margin-top: 10px;
+    height: 2px;
+    width: 0px;
+    border-radius:1px;
+    background-color: #17a2b8;
+    }
+   .menu:hover h3::after {
+    width: 44%;
+    transition: all 0.4s;
+}
+
+  
+  .contact:hover h3::after{
+  	width:38%;
+      transition: all 0.4s;
+  }
+  
+.footer .nav-link{
+	color: #f0f8ff;
+	transition: all 0.3s;
+	}
+	
+	.footer .nav-link:hover{
+	animation:animate__headShake;
+	font-weight:bolder;
+	}
+	
+	.social a:link , .social a:visited {
+    text-decoration: none;
+    padding: 0 15px;
+}
+	.social, .social ul, .social li {
+    margin-left: -3px;
+    padding: 10px;
+    padding-left:0;
+}
+
+.social li {
+    list-style: none outside none;
+    display: inline-block;
+}
+
+.social .fa {
+    color: #FFF;
+    text-shadow: 1px 1px 0px #000,
+            1px -1px 0px #000,
+            -1px 1px 0px #000,
+            -1px -1px 0px #000;
+    -webkit-text-shadow: 1px 1px 0px #000,
+            1px -1px 0px #000,
+            -1px 1px 0px #000,
+            -1px -1px 0px #000;
+    -moz-text-shadow: 1px 1px 0px #000,
+            1px -1px 0px #000,
+            -1px 1px 0px #000,
+            -1px -1px 0px #000;
+    -o-text-shadow: 1px 1px 0px #000,
+            1px -1px 0px #000,
+            -1px 1px 0px #000,
+            -1px -1px 0px #000;
+    transition: all ease-out 0.5s;
+    -moz-transition: all ease-out 0.5s;
+    -webkit-transition: all ease-out 0.5s;
+    -o-transition: all ease-out 0.5s;
+}
+
+.social .fa:hover {
+    color: #000;
+    text-shadow: 1px 1px 0px #fff,
+            1px -1px 0px #fff,
+            -1px 1px 0px #fff,
+            -1px -1px 0px #fff;
+    -webkit-text-shadow: 1px 1px 0px #fff,
+            1px -1px 0px #fff,
+            -1px 1px 0px #fff,
+            -1px -1px 0px #fff;
+    -moz-text-shadow: 1px 1px 0px #fff,
+            1px -1px 0px #fff,
+            -1px 1px 0px #fff,
+            -1px -1px 0px #fff;
+    -o-text-shadow: 1px 1px 0px #fff,
+            1px -1px 0px #fff,
+            -1px 1px 0px #fff,
+            -1px -1px 0px #fff;
+    transition: all ease 0.5s;
+    -moz-transition: all ease-in 0.5s;
+    -webkit-transition: all ease-in 0.5s;
+    -o-transition: all ease-in 0.5s;
+}
+	
+
+
+@media screen and (max-width:900px){
+	footer{
+		background:rgba(0,1,1,0.9);
+		
+		}
+	
+  .menu:hover h3::after {
+    width: 35%;
+    transition: all 0.4s;
+}
+	  .contact:hover h3::after{
+  	width:30%;
+      transition: all 0.4s;
+  }
+  
+    .contact{
+    	margin: 50px 0;
+   
+    }
+  
+  
+  
+
+.up-area{
+	padding: 50px 30px 0 30px;
+	}
+	
+	}

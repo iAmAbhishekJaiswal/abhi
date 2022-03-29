@@ -1,0 +1,286 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cardo&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@500&family=Cormorant+Garamond:wght@300&family=Love+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&family=Poppins:wght@200&family=Raleway:wght@400&family=Tenor+Sans&display=swap');
+
+ body {margin:0; padding:0;
+}
+
+.addtask{
+   
+}
+ .nav-item{
+ 	font-family: cardo;
+ } 
+.navbar-brand{
+	font-family: 'Merienda', cursive;
+	}
+	
+.brandname{
+	font-family: 'Merienda', cursive;
+	}
+	
+
+.urgent{
+	padding:30px 0;
+	display:none;
+	background:skyblue;
+}
+
+h5{
+	   display:inline;
+	}
+
+#headlist li:first-child{
+	 background:lightblue;
+	}
+	
+#otherTask{
+	display:none;
+	overflow:hidden;
+	}
+	
+.btn{
+	    font-family: Georgia, serif;
+	}
+	
+input[type="radio"]{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid #999;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+
+  position: relative;
+  top: 4px;
+}
+
+input[type="radio"]:checked {
+  border: 6px solid black;
+}
+
+  #nameedit{
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom-style: groove;
+       
+        
+      }
+      
+      #nameedit:focus {
+        outline: none;
+      }
+    
+    #namelength{
+    	float:left;
+    }
+    
+    .tasklistitem{
+       transition: transform 0.05s;  
+       	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+    
+    .lefticon{
+    	margin-left:-100px;
+        color:rgb(   92, 184, 92  );
+        display:none;
+        float:left;
+        
+        position: absolute;
+        left:0;
+  top: 50%;
+  transform: translateY(-50%);
+    
+    	
+    }
+    
+    .righticon{
+    	
+    	margin-right:-100px;
+        color:rgb( 91,192,222 );
+       display:none;
+        float:right;
+        position: absolute;
+        right:0;
+       top: 50%;
+       transform: translateY(-50%);
+    
+    	
+    }
+    
+    .lefticon1{
+    	margin-left:-100px;
+        color:rgb(   217, 83, 79 );
+        display:none;
+        float:left;
+        
+        position: absolute;
+        left:0;
+  top: 50%;
+  transform: translateY(-50%);
+    
+    	
+    }
+    
+    .ctaskitem{
+    	transition: transform 0.05s;  
+       border: solid 1px rgba(0,0,0,0.4);
+  // box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+      background-color: rgba(92, 184, 92,0.4);
+    }
+    
+    #headlist li{
+    	font-family: 'Dosis', sans-serif;
+    	font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    }
+    #myModal h5{
+    	font-family: 'Dosis', sans-serif;
+       font-weight: 500;
+       letter-spacing: 1px;    
+    } 
+    
+    #myModal p{
+    	font-family: 'Raleway', sans-serif;
+    
+    }
+    
+    .tasklistitem h5, .ctaskitem h5{
+       font-family: 'Dosis', sans-serif;
+       font-weight: 500;
+       letter-spacing: 1px;
+    }
+    
+   .tasklistitem p, .ctaskitem p{
+   	font-family: 'Raleway', sans-serif;
+   }
+   small{
+   	font-family: 'Cormorant Garamond', serif;
+   font-weight: 400;
+   }
+   
+   .counter{
+    color: #fff;
+    background: linear-gradient(to right bottom, #FFD81B, #f9b12a);
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    width: 160px;
+    height: 160px;
+    padding: 40px 20px 20px;
+    margin: 0 auto;
+    border-radius: 10px 10px 100px 100px;
+    box-shadow: 0 0 15px -5px rgba(0,0,0,0.3);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.counter:after{
+    content: '';
+    background-color: #f9b12a;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+.counter .counter-value{
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 40px;
+    margin: 0 0 15px;
+    display: block;
+}
+.counter h3 {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 20px;
+}
+.addtask h3{
+	font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+	}
+	.addtask label{
+		font-family: 'Dosis', sans-serif;
+       font-weight: 500;
+       letter-spacing: 1px;
+		}
+
+.counter.green{ background: linear-gradient(to right bottom, #a9dd23, #52C242); }
+.counter.green:after{ background: #52C242; }
+.counter.cgreen{ background: linear-gradient(to right bottom, #01AD9F, #008888); }
+.counter.cgreen:after{ background: #008888; }
+.counter.blue{ background: linear-gradient(to right bottom, #00C5EF, #0092f4); }
+.counter.blue:after{ background: #0092f4; }
+@media screen and (max-width:990px){
+    .counter{ margin-bottom: 40px; }
+}
+	
+.proc{
+	text-align:center;
+	
+ }
+ 
+ .prog{
+ 	font-family: 'Dosis', sans-serif;
+   position:relative;
+       font-weight: 600;
+   
+ }
+ 
+.nameabs{
+	  position: absolute;
+	text-transform: uppercase;
+	font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+	  color:white;
+	  left: 0; 
+  right: 0; 
+  top:65%;
+  margin-left: auto; 
+  margin-right: auto; 
+  
+	
+	}
+	
+	.appdetail .righttext{
+		margin:30px;
+		border-right: solid 3px;
+		border-radius:1px;
+		border-image-slice:1;
+		text-align:right;
+		}
+		
+	.appdetail .lefttext{
+		margin:30px;
+		border-left: solid 3px;
+		border-radius:1px;
+		border-image-slice:1;
+		text-align:left
+		}
+	 
+	.appdetail h3{
+		font-family: 'Tenor Sans', sans-serif;
+		}
+	.appdetail p{
+		font-family: 'Poppins', sans-serif;
+		}
+	
+	html {
+  scroll-behavior: smooth;
+}

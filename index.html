@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+      <link rel="stylesheet" href="css/footer.css" type="text/css">
+            <link rel="stylesheet" href="css/animate.css" type="text/css" />
+              	    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">   
+    <title>Dashboard</title>
+     
+  </head>
+  <body onload="startApplication()">
+   
+   <header>   
+   <nav class="navbar navbar-expand-lg navbar-light bg-light pt-3">
+  <a class="navbar-brand pl-2" href="#">Abhi</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link active" href="#"><i class="fa fa-bar-chart pr-1" aria-hidden="true"></i> Dashboard </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="addtask.html"><i class="fa fa-plus pr-2 pl-1" aria-hidden="true"></i> Add Task </a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="viewtask.html"><i class="fa fa-tasks pr-2" aria-hidden="true"></i> View Task </a>
+      </li>
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0" >
+      <input class="form-control mr-sm-2" type="search" placeholder="Search"  id="searchInput" aria-label="Search">
+      <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+   </header>
+   
+   <section  class="pt-5 pb-5 bg-light">
+   	<div class="container-fluid">
+   	
+         <div class="row justify-content-center align-items-center">
+         	
+        <div class="col-md-3 col-6">
+            <div class="counter " >
+                <span class="counter-value" id="totalcount">0</span>
+                <h3>Total Task Added</h3>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="counter cgreen">
+                <span class="counter-value" id="completedcount">0</span>
+                <h3>Total Task Completed</h3>
+            
+    </div>
+</div>
+     <div class="col-md-3 col-6">
+            <div class="counter blue">
+                <span class="counter-value" id="pendingcount">0</span>
+                <h3>Total Pending Task</h3>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="counter green">
+                <span class="counter-value" id="workingcount">0</span>
+                <h3>Total Working Task</h3>
+            
+    </div>
+</div>
+    
+<div class=" col-6  proc p-0" >
+            <div id="active-meter" class="prog">
+              
+            <h3 class="nameabs"> Active </h3>
+    </div>
+    
+</div>
+<div class="col-6 proc p-0" >
+            <div id="lazy-meter" class="prog">
+              
+            <h3 class="nameabs"> Lazy </h3>
+          </div>
+           
+</div>
+
+        
+
+        
+          </div>
+       
+       </div>
+   </section>
+   <section class="pb-5 appdetail bg-light">
+   	 <div class="container-fluid" >
+   	     <div class="row justify-content-center align-items-center">
+   	          <div class="col-12 wow fadeInDown">
+   	              <img src="img/pic1.png" class="img-fluid" alt="hey" />
+                </div>
+            </div>
+            <div class="row justify-content-start">
+                <div class="col-8 lefttext wow fadeInLeft" data-wow-duration="1.2s"  style="border-image-source:linear-gradient(45deg, #000073,#4BC6F9)">
+                  <h3 class="wow fadeInLeft" data-wow-delay="0.5s">   Manage all your work in one place </h3>
+                  <p class="wow fadeInLeft" data-wow-delay="0.7s"> <b class="brandname">Abhi </b> allows you to integrate and manage all tasks and activities in one place.</p>
+               </div>
+               
+           </div>
+           <div class="row justify-content-end">
+                <div class="col-8 righttext wow fadeInRight" data-wow-duration="1.2s" style="border-image-source:linear-gradient(45deg, #6303B1, #ff0099)">
+                     <h3 class="wow fadeInRight" data-wow-delay="0.5s"> Activeness Track</h3>
+                     <p class="wow fadeInRight" data-wow-delay="0.7s"> Track every records and show Active and Lazy percentage based on user activity on <b class="brandname">Abhi </b> .
+               </div>
+               
+           </div>
+           <div class="row justify-content-start">
+                <div class="col-8 lefttext wow fadeInLeft"  data-wow-duration="1.2s" style="border-image-source:linear-gradient(45deg,#420023,#E90079)">
+                  <h3 class="wow fadeInLeft" data-wow-delay="0.5s">   Prioritization </h3>
+                  <p  class="wow fadeInLeft" data-wow-delay="0.7s"> The most important feature of <b class="brandname">Abhi </b>  is prioritization. This helps in efficiently completing all the tasks involved while maintaining the planned constraints.</p>
+               </div>
+               
+           </div>
+           <div class="row justify-content-end">
+                <div class="col-8 righttext wow fadeInRight"  data-wow-duration="1.2s" style="border-image-source:linear-gradient(45deg, #006767 ,#00C0BF );" >
+                     <h3 class="wow fadeInRight"  data-wow-delay="0.5s"> Manage deadlines </h3>
+                     <p class="wow fadeInRight" data-wow-delay="0.7"> Some deadlines might not be met due to lack of time, inefficient management or simply forgetting. <b class="brandname">Abhi </b>  remind your deadline by deadline based prioritisation. </p>
+               </div>
+               
+           </div>
+           
+           <div class="row justify-content-start">
+                <div class="col-8 lefttext  wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay="0.3s" style="border-image-source:linear-gradient(45deg, #603813 0%, #b29f94  51%, #603813  100%) ">
+                     <h3 class="wow fadeInLeft" data-wow-delay="0.5s"> Swipe it</h3>
+                     <p class="wow fadeInLeft" data-wow-delay="0.7s"><b class="brandname">Abhi </b> allows user to change task status with left or right swipe.</p>
+               </div>
+               
+           </div>
+           
+            <div class="row justify-content-center align-items-center">
+                <div class="col-8 wow fadeInUp" style="text-align:center">
+                
+                     <button type="button" class="p-2 pl-5 pr-5 m-1 btn btn-info" onclick="window.location.href ='addtask.html'">Get started</button>
+             </div>
+               
+           </div>
+           
+       </div>
+   </section>
+   
+  
+   
+      <footer>
+             <div class="container-fluid footer">
+                    <div class="row up-area">
+                    	<div class="col-md-3 col-12 menu">
+                    	       <h3> Application Menu </h3>
+                               <nav class="nav flex-column">
+  <a class="nav-link" href="index.html"><i class="fa fa-bar-chart pr-1"></i> Dashboard</a>
+  <a class="nav-link" href="addtask.html"><i class="fa fa-plus pr-2 pl-1"></i> Add Task</a>
+  <a class="nav-link" href="viewtask.html"><i class="fa fa-tasks pr-2"></i> View Task</a>
+  
+    
+</nav>
+                    	</div>
+                    
+          
+                        <div class="col-md-4 col-12 contact ">
+                        	<h3> Connect Us </h3>
+                                <nav class="nav flex-column">
+                                       <a class="nav-link" href="#"><i class="fa fa-envelope"></i> iamabhishekjaiswal01@gmail.com</a>
+                                </nav>
+                       <div class="social">
+<ul>
+<li><a href="#" class="fa fa-2x fa-facebook"></a></li>
+<li><a href="#" class="fa fa-2x fa-github"></a></li>
+<li><a href="#"  class="fa fa-2x fa-instagram"></a></li>
+<li><a href="#" class="fa fa-2x fa-google"></a></li>
+</ul>
+</div>
+
+   	</div>
+                    
+                    
+                    
+                    
+                    
+                        
+                        
+                        
+                      </div>          
+             
+ 
+                    
+                    
+                    <div class="row  justify-content-center">
+                    	<div class="col-11 bg-light divider">
+                    	</div>
+                    
+                    </div>
+                    
+                    <div class="row down-area justify-content-center">
+                          <div class="col-md-6 col-12 p-1"> 
+                               <a ><i class="fa fa-copyright"></i><b  class="brandname">  Abhi </b> </a>
+                          </div>
+                          <div class="col-md-6 col-12 p-1">
+                               <a> Developed with <i class="fa fa-heart"></i>  : Abhishek Jaiswal </a>
+                          </div>
+                    </div>
+                    
+             </div>
+             </div>
+       </footer>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    
+    -->
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="js/fluid.js"></script>
+ <script src="js/wow.min.js"></script>
+    <script>
+     new WOW({offset:160 }).init();
+     
+
+
+    </script>
+    
+
+    	<script src="js/app.js">
+    	    
+    </script>
+  </body>
+</html>

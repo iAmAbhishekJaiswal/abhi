@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    	  	    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/footer.css" type="text/css">
+            <link rel="stylesheet" href="css/animate.css" type="text/css" />
+    <title>View Task</title>
+          
+      
+      
+  </head>
+  <body id="viewtask" onload="viewtaskapp()">
+<header>
+   
+   <nav class="navbar navbar-expand-lg navbar-light bg-light pt-3">
+  <a class="navbar-brand pl-2" href="index.html">Abhi</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="index.html"><i class="fa fa-bar-chart pr-1" aria-hidden="true"></i> Dashboard </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="addtask.html"><i class="fa fa-plus pr-2 pl-1" aria-hidden="true"></i> Add Task </a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link active" href="#"><i class="fa fa-tasks pr-2" aria-hidden="true"></i> View Task </a>
+      </li>
+      
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+   </header>
+   
+   
+   <section  class="pt-3 pb-5 bg-light">
+   	<div class="container-fluid">
+   	     <div class="row">
+   	          <div class="col-md-5 col-12 ">
+   	           
+                  <div >
+   	            <ul class="list-group" id="headlist">
+   	<li class="list-group-item d-flex justify-content-between align-items-center" onclick="viewall(this)" id="fck">
+     Total Pending Task
+    <span class="badge badge-primary badge-pill" id="taskcount">0</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center" onclick="urgent(this)">
+    Urgent Task
+    <span class="badge badge-primary badge-pill" id="urgentcount">0</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center" onclick="important(this)">
+    Important Task
+    <span class="badge badge-primary badge-pill" id="importantcount">0</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center" onclick="normal(this)";>
+     Normal Task
+    <span class="badge badge-primary badge-pill" id="normalcount">0</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center" onclick="completed(this)";>
+     Completed Task
+    <span class="badge badge-primary badge-pill" id="completedcount">0</span>
+  </li>
+  
+</ul>
+  </div>
+        </div>
+                  <div class="col-md-7 col-12 othertask pt-3 p-2" id="otherTask">
+
+                     
+                      <div class="taskCard" id="taskcard">
+                      	
+                       </div>
+      
+                      	
+                      <div class="list-group pt-3 taskcontainer " id="taskitem">
+                      	     
+                         	
+                  
+                     </div>
+                  </div>
+        
+   	    </div>
+       </div>
+   </section>
+   <footer>
+             <div class="container-fluid footer">
+                    <div class="row up-area">
+                    	<div class="col-md-3 col-12 menu">
+                    	       <h3> Application Menu </h3>
+                               <nav class="nav flex-column">
+  <a class="nav-link" href="index.html"><i class="fa fa-bar-chart pr-1"></i> Dashboard</a>
+  <a class="nav-link" href="addtask.html"><i class="fa fa-plus pr-2 pl-1"></i> Add Task</a>
+  <a class="nav-link" href="viewtask.html"><i class="fa fa-tasks pr-2"></i> View Task</a>
+
+    
+</nav>
+                    	</div>
+                    
+          
+                        <div class="col-md-4 col-12 contact ">
+                        	<h3> Connect Us </h3>
+                                <nav class="nav flex-column">
+                                       <a class="nav-link" href="#"><i class="fa fa-envelope"></i> iamabhishekjaiswal01@gmail.com</a>
+                                </nav>
+                                <div class="social">
+<ul>
+<li><a href="#" class="fa fa-2x fa-facebook"></a></li>
+<li><a href="#" class="fa fa-2x fa-github"></a></li>
+<li><a href="#"  class="fa fa-2x fa-instagram"></a></li>
+<li><a href="#" class="fa fa-2x fa-google"></a></li>
+</ul>
+</div>
+
+   	</div>
+                    
+                    
+                    
+                    
+                    
+                        
+                        
+                        
+                      </div>          
+             
+ 
+                    
+                    
+                    <div class="row  justify-content-center">
+                    	<div class="col-11 bg-light divider">
+                    	</div>
+                    
+                    </div>
+                    
+                    <div class="row down-area justify-content-center">
+                          <div class="col-md-6 col-12 p-1"> 
+                               <a><i class="fa fa-copyright"></i>   Chela </a>
+                          </div>
+                          <div class="col-md-6 col-12 p-1">
+                               <a> Developed with <i class="fa fa-heart"></i>  : Abhishek Jaiswal </a>
+                          </div>
+                    </div>
+                    
+             </div>
+             
+       </footer>
+
+  
+     
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+   <script src="js/swipeHandler.js"></script>
+
+
+    
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    
+    -->
+    	<script src="js/app.js"> </script>
+    	<script>
+    	
+               var urgentItem =[ ];
+               var normalItem=[ ];
+               var importantItem=[ ];
+               startApplication();
+               var taskTrack=0;
+               var editNameTrack=0;
+               var swipeTrack;
+               var range=0;
+               var directionTrack=' ';
+               var otherTask=[];
+               var dayLeft=0;
+               var leftOrLate="left"; //default value
+               var completedTask;
+              
+              
+              
+      
+              
+               
+               function viewtaskapp(){
+               	
+               /*empty initialisation*/
+                normalItem=[ ];
+                urgentItem =[ ];
+                importantItem=[ ];
+                taskTrack=0;
+                editNameTrack=0;
+                dayLeft=0;
+                leftOrLate="left"; 
+               
+               if(localStorage.getItem("task") !== null){
+               document.getElementById('otherTask').style.display="block";
+               updateJson();
+               
+                otherTask=JSON.parse(localStorage.getItem("task") );
+              
+               //sort data based on day left
+              otherTask.sort((a, b) => {
+                  return a.dayleft - b.dayleft;
+               });
+               
+               //update index
+               for(var i=0;i<otherTask.length;i++)
+               otherTask[i].tasknum=i;
+              
+               var taskItem= ' ';
+               var animeDuration=200;
+               
+               
+               for(var i=0;i<otherTask.length;i++){
+                dayLeft=calculateDay(otherTask[i]);
+            
+                       if(i>0)
+                        animeDuration=i*200;
+                        if(animeDuration>=1000)
+                        animeDuration=200;
+                     
+                        
+                 
+                if(dayLeft<0)
+                    leftOrLate="late";
+                
+                 
+                 
+                taskItem = '<a href="#" onclick="openTask('+otherTask[i].tasknum+') " id=" ' +  otherTask[i].tasknum +' " class="tasklistitem list-group-item list-group-item-action m-0 wow fadeInDown" data-wow-duration=" '+ animeDuration  + 'ms" data-wow-delay="0.5s">'+
+                                         '<div class="lefticon"><i class=" fa fa-trophy fa-2x  wow fadeInRight" data-wow-duration="300ms"></i></div>'+
+                                         ' <div class="d-flex w-100 justify-content-between">'+
+                                        
+                                            '  <h5 class="mb-1">' +   otherTask[i].taskName  +'</h5>'+
+                                                '   <small>'+dayLeft+' days '+   leftOrLate  +'</small>'+
+                                                ' </div>'+
+                                        ' <p class="mb-1">'+otherTask[i].discription+'</p>'+
+                                        '   <small>'+otherTask[i].status+'</small>'+
+                                        '  <small class="text-muted float-right">Edit</small>'+
+                                        '<div class="righticon"><i class=" dynamicon fa fa-hourglass-half fa-2x  wow fadeInLeft" data-wow-duration="300ms"></i></div>'+
+                                        '</a>';
+                     
+                     switch(parseInt(otherTask[i].priority)){
+                     	case 1: normalItem.push(taskItem);
+                          break;
+                          case 2: importantItem.push(taskItem);
+                          break;
+                          case 3: urgentItem.push(taskItem);
+                     
+                     }
+                     
+                    
+                   }
+            document.getElementById('taskcount').innerHTML=otherTask.length;
+            document.getElementById('normalcount').innerHTML=normalItem.length;
+            document.getElementById('importantcount').innerHTML=importantItem.length;
+            document.getElementById('urgentcount').innerHTML=urgentItem.length;
+            if (localStorage.getItem("completedtask") !== null) 
+            document.getElementById('completedcount').innerHTML=JSON.parse(localStorage.getItem("completedtask")).length;
+           
+            
+                
+                
+                viewall(document.getElementById("fck"));
+               }
+               
+              }
+               
+               
+               
+              
+               
+               function normal( n ){
+               	backgroundRemove();
+               	n.style.background="lightblue";
+                  var dataset='';
+                  for(var i=0;i<normalItem.length;i++)
+                  dataset+=normalItem[i];
+               	document.getElementById('taskitem').innerHTML=dataset;
+                   
+                   swipeMaster(normal,n);
+               }
+               
+               
+               function important(n ){
+               	backgroundRemove();
+               n.style.background="lightblue";
+                 var dataset='';
+                  for(var i=0;i<importantItem.length;i++)
+                  dataset+=importantItem[i];
+               	document.getElementById('taskitem').innerHTML=dataset;
+               
+                        swipeMaster(important,n);
+            
+            
+               }
+               
+               
+               function urgent(n ){
+               	backgroundRemove();
+               n.style.background="lightblue";
+               var dataset=' ';
+                  for(var i=0;i<urgentItem.length;i++)
+                  dataset+=urgentItem[i];
+               	document.getElementById('taskitem').innerHTML=dataset;
+                  
+                       swipeMaster(urgent,n);
+               
+               }
+               
+               function viewall( n){
+               	backgroundRemove();
+               n.style.background="lightblue";
+               var dataset=' ';
+                  for(var i=0;i<urgentItem.length;i++)
+                  dataset+=urgentItem[i];
+                 for(var i=0;i<importantItem.length;i++)
+                  dataset+=importantItem[i];
+                  for(var i=0;i<normalItem.length;i++)
+                  dataset+=normalItem[i];
+                  
+               	document.getElementById('taskitem').innerHTML=dataset;
+                       swipeMaster(viewall, n);
+               }
+               
+               function backgroundRemove( ){
+                var headlist=document.getElementById("headlist").getElementsByTagName("li");
+                for(var i=0;i<headlist.length;i++)
+                headlist[i].style.background="white";
+               
+               }
+
+
+               function openTask(tasknum){
+                   
+               	 
+               	for(var j=0;j<otherTask.length;j++){
+               	 
+               	     if(otherTask[j].tasknum==tasknum)
+                       {
+                       	taskTrack=j;
+                       var updatestatus=' ';;
+                       switch(otherTask[j].status){
+                       	case "completed":
+                          
+                         updatestatus=   ' <div class="form-check form-check-inline pr-3">'+
+ '  <input class="form-check-input" type="radio" name="statusradio" id="inlineRadio1" value="pending">'+
+    '<label class="form-check-label" for="inlineRadio1"><i class="fa fa-thumb-tack"> </i></label>'+
+    '</div>'+
+   '<div class="form-check form-check-inline pr-3">'+
+  ' <input class="form-check-input" type="radio" name="statusradio" id="inlineRadio2" value="working">'+
+ '  <label class="form-check-label" for="inlineRadio2"><i class="fa fa-hourglass-half"> </i></label>'+
+    '</div>'+
+  '<div class="form-check form-check-inline">'+
+  '<input class="form-check-input" type="radio" name="statusradio" id="inlineRadio3" value="completed" checked>'+
+  '<label class="form-check-label" for="inlineRadio3"><i class="fa  fa-trophy"> </i></label>'+
+    '</div>';
+     break;
+                           
+                    case "working":
+                     updatestatus=     ' <div class="form-check form-check-inline pr-3">'+
+ '  <input class="form-check-input" type="radio" name="statusradio" id="inlineRadio1" value="pending">'+
+    '<label class="form-check-label" for="inlineRadio1"><i class="fa fa-thumb-tack"> </i></label>'+
+    '</div>'+
+   '<div class="form-check form-check-inline pr-3">'+
+  ' <input class="form-check-input" type="radio" name="statusradio" id="inlineRadio2" value="working" checked>'+
+ '  <label class="form-check-label" for="inlineRadio2"><i class="fa fa-hourglass-half"> </i></label>'+
+    '</div>'+
+  '<div class="form-check form-check-inline">'+
+  '<input class="form-check-input" type="radio" name="statusradio" id="inlineRadio3" value="completed">'+
+  '<label class="form-check-label" for="inlineRadio3"><i class="fa  fa-trophy"> </i></label>'+
+    '</div>';
+    break;
+   
+    default:
+       updatestatus=   ' <div class="form-check form-check-inline pr-3">'+
+ '  <input class="form-check-input" type="radio" name="statusradio" id="inlineRadio1" value="pending" checked>'+
+    '<label class="form-check-label" for="inlineRadio1"><i class="fa fa-thumb-tack"> </i></label>'+
+    '</div>'+
+   '<div class="form-check form-check-inline pr-3">'+
+  ' <input class="form-check-input" type="radio" name="statusradio" id="inlineRadio2" value="working">'+
+ '  <label class="form-check-label" for="inlineRadio2"><i class="fa fa-hourglass-half"> </i></label>'+
+    '</div>'+
+  '<div class="form-check form-check-inline">'+
+  '<input class="form-check-input" type="radio" name="statusradio" id="inlineRadio3" value="completed" >'+
+  '<label class="form-check-label" for="inlineRadio3"><i class="fa  fa-trophy"> </i></label>'+
+    '</div>';
+    
+  
+                       
+                       }
+                       
+                 var taskdata=  ' <div class="modal mt-5 fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">'+
+'  <div class="modal-dialog">'+
+   ' <div class="modal-content">'+
+   '   <div class="modal-header ">'+
+      
+     '<h5 class="modal-title" id="headername"><div id="namelength"> '+  otherTask[j].taskName  + '</div><i class="fa fa-pencil pl-4 pt-1" onclick="editName( );"> </i></h5>'+
+        '<button type="button" class="close" data-dismiss="modal" aria-label="Close">'+
+      ' <span aria-hidden="true">&times;</span>'+
+      '  </button> </div>'+
+        '<div class="modal-body">'+
+          '<div class="row">'+
+      '<div class="col-12 ml-auto">   '+
+      ' <small class="text-muted float-right">'+dayLeft+' days '+   leftOrLate  +'</small>'+
+        '</div>'+
+      '<div class="col-12 ml-auto">'+
+      	'<p>'+otherTask[j].discription+'</p>'+
+      '  </div>'+
+      
+     '  </div>'+
+        updatestatus+
+
+       ' </div>'+
+       
+        '<div class="modal-footer">'+
+     
+        '<button type="button" class="btn btn-secondary float-right" data-dismiss="modal" onclick="updateStatus()">Save changes</button>'+
+      '</div> </div> </div></div>';
+                       
+                       
+                       
+                
+                           
+                        document.getElementById("taskcard").innerHTML=taskdata;
+                 
+                        document.getElementById("taskcard").style.display="block"
+                       
+                        $('#myModal').modal('show')
+               	  }
+                  }
+               }
+               
+           function updateStatus(){
+           
+               var statusRadio = document.getElementsByName('statusradio'); 
+               if(editNameTrack===1){
+               	var updatedName=document.getElementById("nameedit").value;
+                   if(updatedName != "")
+                   otherTask[taskTrack].taskName=updatedName;
+               }
+              
+               for(var i = 0; i < statusRadio.length; i++) { 
+               if(statusRadio[i].checked) 
+               otherTask[taskTrack].status=statusRadio[i].value;
+               
+               } 
+              
+    
+            localStorage.setItem("task",JSON.stringify(otherTask));
+            if(otherTask[taskTrack].status==="completed")
+            taskhandler(otherTask[taskTrack], taskTrack);
+            viewtaskapp();
+            
+       }
+        
+       function taskhandler(taskdata, index){
+       	var task= JSON.parse(localStorage.getItem("task") );
+            if (localStorage.getItem("completedtask") === null) 
+               var completedtask=[ ];
+               else
+               var completedtask=JSON.parse(localStorage.getItem('completedtask'));
+            
+               completedtask.push(taskdata);
+               viewPointCalculation( taskdata);
+               task.splice(index,1);
+               localStorage.setItem("task",JSON.stringify(task));
+               localStorage.setItem("completedtask",JSON.stringify(completedtask));
+       }
+             
+           function editName(prename){
+           	    var headlength=Math.ceil(document.getElementById("headername").clientWidth);
+                   var namelength =Math.ceil(document.getElementById("namelength").clientWidth);
+                   var inputsize= 50;
+                  if( (namelength/headlength)*100 > 50 && (namelength/headlength)*100 < 90 )
+                  inputsize=(namelength/headlength)*100 + 5 ;
+             
+           	  document.getElementById("headername").innerHTML='<input type="text " id="nameedit" placeholder=" '+ otherTask[taskTrack].taskName + ' " autocomplete="off"/>';
+                 document.getElementById("nameedit").style.width=inputsize+"%";
+                 editNameTrack=1;
+           }
+           
+           
+           
+           function completed(n){
+               	backgroundRemove();
+                   n.style.background="lightblue";
+                   if(localStorage.getItem("completedtask") != null){
+                   completedTask=JSON.parse(localStorage.getItem("completedtask") );
+               
+                    var completedtaskitem= ' ';
+                    var earlierOrLate="earlier";
+                    var completedtaskArray=[];
+                    var animeDuration=200;
+                    for(var k=0;k<completedTask.length;k++){
+                        if(k>0)
+                        animeDuration=k*200;
+                        if(animeDuration>=1000)
+                        animeDuration=200;
+                     
+                        
+                       if(completedTask[k].dayleft<0)
+                       earlierOrLate="late";
+                        
+                        completedtaskitem = '<a href="#" id="'+k+'"  class="ctaskitem list-group-item list-group-item-action wow fadeInDown" data-wow-duration=" '+ animeDuration  + 'ms">'+          
+                                                '<div class="lefticon1"><i class=" fa fa-trash fa-2x  wow fadeInRight" data-wow-duration="300ms"></i></div>'+                               
+                                         ' <div class="d-flex w-100 justify-content-between">'+
+                                            '  <h5 class="mb-1">' +   completedTask[k].taskName  +'</h5>'+
+                                                '   <small>'+completedTask[k].dayleft+' days '+   earlierOrLate  +'</small>'+
+                                                ' </div>'+
+                                        ' <p class="mb-1">'+completedTask[k].discription+'</p>'+
+                                        '   <small>'+completedTask[k].status+'</small>'+
+                                        '  <small class="text-muted float-right">Delete</small>'+
+                                        '<div class="righticon"><i class=" fa fa-hourglass-half fa-2x  wow fadeInLeft" data-wow-duration="300ms"></i></div>'+
+                                        '</a>';
+                                     completedtaskArray.push(completedtaskitem);
+                                    }
+                                    
+                     var dataset=' ';
+                     for(var i=0;i<completedtaskArray.length;i++)
+                     dataset+=completedtaskArray[i];
+                   
+                   document.getElementById('taskitem').innerHTML= dataset;
+                            
+                    $('.ctaskitem').on('touchstart', function(e) {  
+                   range=0;
+                 
+                  swipeTrack=$(this).prop("id");                 
+                  
+       
+            });
+
+              $(".ctaskitem").swipe(function( direction, offset ) {
+      	var ele=document.getElementById(swipeTrack);
+          var eleWidth = window.getComputedStyle(ele).getPropertyValue("width");
+         var eleHeight = window.getComputedStyle(ele).getPropertyValue("height");
+       
+   //calculation of range of swipe between 0 to 1
+          range=   ((offset.x/  parseInt(eleWidth ))*100)/100;
+          
+      	if(direction.x==="right"){
+      	
+      	 ele.style.background="rgba(217, 83, 79,"+range+")";
+           directionTrack="right";
+           if(range>=0.6){
+                 	ele.style.height=eleHeight;
+                 	document.getElementsByClassName("lefticon1")[swipeTrack].style.display="block";
+                 
+                 }
+          }
+          else if(direction.x==="left"){
+          	ele.style.background="rgba(91,192,222,"+(Math.abs(range)+0.2)+")";
+               directionTrack="left";
+               if(Math.abs(range)>=0.6){
+                 	ele.style.height=eleHeight;
+                 	document.getElementsByClassName("righticon")[swipeTrack].style.display="block";
+                 }
+        }
+           
+            document.getElementById(swipeTrack).style.transform="translateX("+offset.x+"px)";
+            
+     });
+
+
+      $('.ctaskitem').on('touchend', function(e) {  
+         	
+         var element=document.getElementById(swipeTrack);
+                  element.style.background="rgba(92, 184, 92,0.4)";
+                   element.style.transform="translateX(-"+"0px)";
+                   document.getElementsByClassName("lefticon1")[swipeTrack].style.display="none";
+                   document.getElementsByClassName("righticon")[swipeTrack].style.display="none";
+                   
+            if(Math.abs(range)>0.6){
+            	
+            	if(directionTrack==="right"){
+                completedTask.splice(swipeTrack,1);
+                localStorage.setItem("completedtask",JSON.stringify(completedTask));
+                viewtaskapp();
+                completed(n);
+             }
+            
+             else if(directionTrack==="left"){
+             	completedTask[swipeTrack].status="working";
+                 var task= JSON.parse(localStorage.getItem("task") );
+                  task.push(completedTask[swipeTrack]);
+                  localStorage.setItem("task",JSON.stringify(task));
+                  completedTask.splice(swipeTrack,1);
+                  localStorage.setItem("completedtask",JSON.stringify(completedTask));
+                  completeToWorking(); //to decrease completedCount
+                  viewtaskapp();
+                  completed(n);
+                  
+             }
+             
+                 
+            }
+            
+            });
+
+         
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                    }          
+                    
+               }
+         
+         
+         function swipeMaster(x,n){
+         	
+         $('.tasklistitem').on('touchstart', function(e) {       
+         	     
+                  swipeTrack=$(this).prop("id");               
+            });
+         $(".tasklistitem").swipe(function( direction, offset ) {
+         	var element=document.getElementById(swipeTrack);
+             var eleWidth = window.getComputedStyle(element).getPropertyValue("width");
+            // var eleHeight = window.getComputedStyle(element).getPropertyValue("height");
+             range=   ((offset.x/  parseInt(eleWidth ))*100)/100;
+             
+             if(direction.x==="right"){
+           	 element.style.background="rgba(92, 184, 92,"+(range+0.2)+")";
+                directionTrack="right";
+    
+                 if(Math.abs(range)>=0.6){
+                 	//element.style.height=eleHeight;
+                     element.firstChild.style.display="block";
+                     
+                     
+                 }
+             }
+          else if(direction.x==="left"){
+          	directionTrack="left";
+               if(otherTask[parseInt(swipeTrack)].status==="working")
+          	element.style.background="rgba(91,192,222,"+(Math.abs(range)+0.2)+")"; 
+              else {
+              element.style.background="rgba(239, 192, 80,"+(Math.abs(range)+0.2)+")"; 
+               element.lastChild.style.color="rgb(239, 192, 80)";
+               }
+               
+           if(Math.abs(range)>=0.6){
+               	//element.style.height=eleHeight;
+                   element.lastChild.style.display="block";
+                   var dynamicon=element.lastChild.firstChild.classList;
+                      if(otherTask[parseInt(swipeTrack)].status==="working"){
+                      	
+                      	dynamicon.remove("fa-hourglass-half");
+                          dynamicon.add("fa-thumb-tack"); 
+                     	  
+                      }
+                      else{
+                      	dynamicon.remove("fa-thumb-tack");
+                          dynamicon.add("fa-hourglass-half"); 
+                      }                          
+                }//innerifclose     
+          }//elseif close
+            
+            document.getElementById(swipeTrack).style.transform="translateX("+offset.x+"px)";
+         });
+          
+          $('.tasklistitem').on('touchend', function(e) {  
+         	    var element=document.getElementById(swipeTrack);
+             
+                     document.getElementById(swipeTrack).style.background="white";
+                     element.firstChild.style.display="none";
+                      element.lastChild.style.display="none"; 
+                     document.getElementById(swipeTrack).style.transform="translateX(-"+"0px)";
+                  
+                    if(Math.abs(range)>0.6){
+                         if(directionTrack==="right"){
+                             otherTask[parseInt(swipeTrack)].status="completed";
+                             localStorage.setItem("task",JSON.stringify(otherTask));
+                             taskhandler(otherTask[parseInt(swipeTrack)], parseInt(swipeTrack));
+                             viewtaskapp();
+                             x(n);
+            
+                       }
+                       
+                       else if(directionTrack==="left"){
+                      	if(otherTask[parseInt(swipeTrack)].status==="pending")
+                      	otherTask[parseInt(swipeTrack)].status="working";
+                          else
+                          otherTask[parseInt(swipeTrack)].status="pending";
+                  
+                         localStorage.setItem("task",JSON.stringify(otherTask));
+                         viewtaskapp();
+                         x(n);
+                 
+                       }
+                       
+                  }
+                  
+                  
+                  
+            });
+         }
+         
+         
+         function viewPointCalculation( taskdata){
+             if (localStorage.getItem("pointOnView") === null) {
+               var pointOnView={};
+               pointOnView.completedTask=0;
+               pointOnView.viewPointPercentage=0;
+               }
+               else
+               var pointOnView=JSON.parse(localStorage.getItem('pointOnView'));
+               
+               var pointOnChange = 0;
+               
+               
+               
+               
+               pointOnView.completedTask++;
+               if(taskdata.dayleft<0)
+               pointOnChange= pointOnChange-5;
+               else if(taskdata.dayleft<5)
+               pointOnChange += 1;
+               else if(taskdata.dayleft<15)
+               pointOnChange += 2;
+               else if(taskdata.dayleft<30)
+               pointOnChange += 3;
+               else if(taskdata.dayleft<50)
+               pointOnChange += 4;
+               else 
+               pointOnChange += 5;
+               
+               
+               if(pointOnView.viewPointPercentage===0)
+               pointOnView.viewPointPercentage = (pointOnChange/5)*100;
+               else
+                pointOnView.viewPointPercentage=(pointOnView.viewPointPercentage+(pointOnChange/5)*100)/2;
+               
+     
+         
+              
+             localStorage.setItem("pointOnView",JSON.stringify(pointOnView));
+         }
+         
+         
+         function completeToWorking(){
+         	
+               var pointOnView=JSON.parse(localStorage.getItem('pointOnView'));
+                pointOnView.completedTask--;
+                localStorage.setItem("pointOnView",JSON.stringify(pointOnView));
+         
+         }
+         
+ 
+        
+        
+       </script>
+       
+   
+
+
+       <script src="js/wow.min.js"></script>
+    <script>
+     new WOW().init();
+    </script>
+  </body>
+</html>
